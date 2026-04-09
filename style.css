@@ -1,0 +1,584 @@
+/* Reset and Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #4A4A4A;
+    background-color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.font-nunito { font-family: 'Nunito', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px; /* Mobile design focus */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.relative { position: relative; }
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.pb-30 { padding-bottom: 30px; }
+.font-bold { font-weight: 700; }
+.uppercase { text-transform: uppercase; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.text-center { text-align: center; }
+
+/* Colors */
+.text-green { color: #11682B; }
+.text-yellow { color: #ECAF1C; }
+.bg-light-gray { background-color: #F8F9FA; }
+.w-40 { width: 40px; }
+.w-60 { width: 60px; }
+.w-max { width: max-content; }
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    border: 3.5px solid #ECAF1C;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-circle i {
+    transform: rotate(45deg);
+    color: #11682B;
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    left: -2px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text .pick-my {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+.logo-text .career {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #2b2b2b;
+    letter-spacing: -0.5px;
+    margin-top: 2px;
+}
+
+.menu-icon {
+    font-size: 22px;
+    color: #444;
+    cursor: pointer;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #fff;
+    z-index: 999;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    padding: 30px;
+}
+.mobile-menu.active {
+    right: 0;
+}
+.close-menu {
+    font-size: 24px;
+    text-align: right;
+    cursor: pointer;
+    margin-bottom: 30px;
+    color: #333;
+}
+.mobile-menu ul {
+    list-style: none;
+}
+.mobile-menu ul li a {
+    display: block;
+    padding: 15px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+}
+
+/* Hero Section */
+.hero {
+    padding: 30px 0 0 0;
+    background: #f9f9f9;
+}
+
+.hero .main-title {
+    font-size: 26px;
+    color: #4A4A4A;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #555;
+}
+
+.underline {
+    height: 3px;
+    background-color: #ECAF1C;
+    margin: 8px 0;
+}
+
+.yellow-underline {
+    width: 50px;
+}
+
+/* Button */
+.btn-yellow {
+    display: inline-flex;
+    align-items: stretch;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    font-family: 'Nunito', sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s;
+}
+
+.btn-yellow:hover {
+    box-shadow: 0 4px 8px rgba(236, 175, 28, 0.3);
+}
+
+.btn-yellow .btn-text {
+    background-color: #f7c126;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px 18px;
+}
+
+.btn-yellow .btn-icon {
+    background-color: #d19a00;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    font-size: 14px;
+}
+
+.center-btn {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.btn-full {
+    width: 100%;
+}
+.btn-full .btn-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Typography styles */
+.main-heading {
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #11682B; /* Default green */
+    line-height: 1.3;
+}
+.desc-text {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Stats */
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+    margin-top: 30px;
+}
+.stat-box {
+    flex: 1;
+    padding: 0 5px;
+}
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: #ddd;
+    margin-top: 5px;
+}
+
+/* Cream Blob Section */
+.cream-blob-bg {
+    background-color: #FFF8E7; /* Light cream */
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+}
+
+.section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
+    color: #4A4A4A;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.quote-text {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Feature List */
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.feature-icon-wrapper {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    border-radius: 50%;
+    border: 1px solid #c2ccda;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-icon {
+    font-size: 22px;
+}
+
+.feature-content h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #4A4A4A;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.feature-content p {
+    font-size: 14.5px;
+    color: #5d6778;
+    line-height: 1.6;
+}
+
+/* Expected from PickMyCareer */
+.light-heading {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+}
+
+.bold-heading-large {
+    font-family: 'Nunito', sans-serif;
+    font-size: 34px;
+    color: #4A4A4A;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.bold-heading {
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    color: #4A4A4A;
+    font-weight: 700;
+}
+
+.expect-desc {
+    font-size: 15.5px;
+    color: #5d6778;
+    line-height: 1.6;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    font-size: 15.5px;
+    color: #5d6778;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.list-icon {
+    color: #8C99AA; /* Grey blueish checkmark */
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+/* Video Thumbnail */
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    display: block;
+}
+
+.play-icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    color: #FF0000;
+    border-radius: 50%;
+    background: #fff;
+    width: 50px; height: 50px;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.play-icon-overlay i {
+    font-size: 55px; /* scale brand icon within circle */
+}
+
+.video-overlay-details {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+.small-text {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Benefit section */
+.curve-top-gray {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.benefit-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.shadow-card {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.card-img-container {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.benefit-card h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #3b4256; 
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.benefit-card p {
+    font-size: 15px;
+    color: #5d6778;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #FAFAFA;
+    border-top: 1px solid #EEE;
+    color: #666;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .stats-row {
+        justify-content: center;
+        gap: 60px;
+    }
+    
+    .features-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .benefit-cards-wrapper {
+        display: flex;
+        gap: 30px;
+        align-items: stretch;
+    }
+    
+    .benefit-card {
+        flex: 1;
+        margin-top: 0 !important; /* Override the mt-30 on second card */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .benefit-card button {
+        margin-top: auto; /* Push button to bottom */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .header {
+        padding: 20px 40px;
+    }
+    
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+    }
+    
+    .menu-icon {
+        display: none; /* Hide hamburger menu on desktop if we want to show links, but for now we haven't built desktop nav */
+    }
+    
+    .hero {
+        padding: 60px 0 30px;
+    }
+    
+    .hero .main-title {
+        font-size: 36px;
+    }
+    
+    .hero .main-heading {
+        font-size: 32px;
+    }
+    
+    .stats-row {
+        gap: 100px;
+        font-size: 14px;
+    }
+
+    .stat-box p {
+        font-size: 15px;
+    }
+    
+    .section-title, .bold-heading-large {
+        font-size: 40px;
+    }
+    
+    .features-list {
+        gap: 60px;
+    }
+    
+    .video-thumbnail {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1140px;
+    }
+}
